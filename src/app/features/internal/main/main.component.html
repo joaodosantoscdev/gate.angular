@@ -1,0 +1,66 @@
+<div class="main-container my-3">
+  <mat-card class="mb-3">
+    <h3 class="color-primary mb-2">Último acesso por</h3>
+    <div class="card card-outlined faded no-padding">
+      <div class="row ">
+        <div class="col-lg-auto col-md-6">
+          <mat-icon class="user-image">person</mat-icon>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="row my-3">
+            <span class="font-600">Nome:</span>
+            <span class="text-muted">Teste</span>
+          </div>
+          <div class="row my-3">
+            <span class="font-600">Data de nasc.:</span>
+            <span class="text-muted">01/01/2020</span>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="row my-3">
+            <span class="font-600">Sobrenome:</span>
+            <span class="text-muted">Da Silva</span>
+          </div>
+          <div class="row my-3">
+            <span class="font-600">Tipo de acesso</span>
+            <span class="text-muted">Visitante</span>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="row my-3">
+            <span class="font-600">Documento:</span>
+            <span class="text-muted">314.422.408-14</span>
+          </div>
+          <div class="row my-3">
+            <span class="font-600">Horário:</span>
+            <span class="text-muted">01/01/2020</span>
+          </div>
+        </div>
+
+        <div class="col-lg-auto col-md-6">
+          <div class="d-flex flex-column align-items-center justify-content-center">
+            <mat-icon class="access in m-auto">arrow_upwards</mat-icon>
+            <span class="font-16 font-600">ENTRADA</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-card>
+  <mat-card>
+    <h3 class="color-primary mb-2">Outros acessos</h3>
+    <div class="filter-wrapper mb-2">
+      <mat-chip color="primary" [disabled]="false">
+        <span>Todos</span>
+      </mat-chip>
+      <mat-chip class="mx-2" color="primary" [disabled]="true">
+        <span>Somente entradas</span>
+      </mat-chip>
+      <mat-chip color="primary" [disabled]="true">
+        <span>Somente saídas</span>
+      </mat-chip>
+    </div>
+  </mat-card>
+</div>

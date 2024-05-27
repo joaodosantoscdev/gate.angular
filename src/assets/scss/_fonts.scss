@@ -1,0 +1,65 @@
+@font-face {
+  font-family: 'MulishBlack';
+  src: url('./../fonts/Mulish-Black.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MulishExtraBold';
+  src: url('./../fonts/Mulish-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MulishRegular';
+  src: url('./../fonts/Mulish-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MontserratRegular';
+  src: url('./../fonts/Montserrat-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MontserratBold';
+  src: url('./../fonts/Montserrat-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./../fonts/MaterialIcons-Font.woff2') format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+}
+@font-face {
+  font-family: 'KanitBold';
+  src: url('./../fonts/Kanit-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'KanitLight';
+  src: url('./../fonts/Kanit-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'KanitMedium';
+  src: url('./../fonts/Kanit-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'KanitRegular';
+  src: url('./../fonts/Kanit-Regular.ttf') format('truetype');
+}

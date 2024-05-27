@@ -1,0 +1,179 @@
+$break-mobile: 576px;
+$break-tablet: 768px;
+$break-phablet: 992px;
+$break-desktop-sm: 1200px;
+$break-desktop-md: 1366px;
+$break-desktop-lg: 1400px;
+
+// MAIN-COLOR
+$main-color: #011c3b;
+$ultra-light-main-color: lighten($main-color, 50%);
+$light-main-color: lighten($main-color, 40%);
+$medium-light-main-color: lighten($main-color, 30%);
+$medium-main-color: lighten($main-color, 20%);
+$medium-dark-main-color: lighten($main-color, 10%);
+$dark-main-color: darken($main-color, 5%);
+$deep-main-color: darken($main-color, 10%);
+$very-dark-main-color: darken($main-color, 15%);
+
+// SECONDARY-COLOR
+$secondary-color: #F57000;
+$ultra-light-secondary-color: lighten($secondary-color, 45%);
+$light-secondary-color: lighten($secondary-color, 35%);
+$medium-light-secondary-color: lighten($secondary-color, 25%);
+$medium-secondary-color: lighten($secondary-color, 15%);
+$medium-dark-secondary-color: lighten($secondary-color, 5%);
+$dark-secondary-color: darken($secondary-color, 10%);
+$deep-secondary-color: darken($secondary-color, 20%);
+$very-dark-secondary-color: darken($secondary-color, 30%);
+
+// DETAILS-COLOR
+$details-color: #5FE0DD;
+$ultra-light-details-color: lighten($details-color, 30%);
+$light-details-color: lighten($details-color, 25%);
+$medium-light-details-color: lighten($details-color, 20%);
+$medium-details-color: lighten($details-color, 15%);
+$medium-dark-details-color: lighten($details-color, 5%);
+$dark-details-color: darken($details-color, 10%);
+$deep-details-color: darken($details-color, 20%);
+$very-dark-details-color: darken($details-color, 30%);
+
+// MAIN-FONT-COLOR
+$main-font-color: #414042;
+$ultra-light-main-font-color: lighten($main-font-color, 40%);
+$light-main-font-color: lighten($main-font-color, 30%);
+$medium-light-main-font-color: lighten($main-font-color, 20%);
+$medium-main-font-color: lighten($main-font-color, 10%);
+$medium-dark-main-font-color: lighten($main-font-color, 5%);
+$dark-main-font-color: darken($main-font-color, 5%);
+$deep-main-font-color: darken($main-font-color, 10%);
+$very-dark-main-font-color: darken($main-font-color, 15%);
+
+// FILTERS-COLOR
+$filters-color: #C4C4C4;
+
+// WHITE-COLOR
+$white-color: #FFFFFF;
+$ultra-light-white-color: darken($white-color, 15%);
+$light-white-color: darken($white-color, 20%);
+$medium-light-white-color: darken($white-color, 30%);
+$medium-white-color: darken($white-color, 40%);
+$medium-dark-white-color: darken($white-color, 50%);
+$dark-white-color: darken($white-color, 60%);
+$deep-white-color: darken($white-color, 70%);
+$very-dark-white-color: darken($white-color, 80%);
+
+// WHITE-COLOR
+$white-color: #FFFFFF;
+$ultra-light-white-color: darken($white-color, 15%);
+$light-white-color: darken($white-color, 20%);
+$medium-light-white-color: darken($white-color, 30%);
+$medium-white-color: darken($white-color, 40%);
+$medium-dark-white-color: darken($white-color, 50%);
+$dark-white-color: darken($white-color, 60%);
+$deep-white-color: darken($white-color, 70%);
+$very-dark-white-color: darken($white-color, 80%);
+
+// SUCCESS-COLOR
+$success-color: #2196F3;
+$ultra-light-success-color: lighten($success-color, 40%);
+$light-success-color: lighten($success-color, 30%);
+$medium-light-success-color: lighten($success-color, 20%);
+$medium-success-color: lighten($success-color, 10%);
+$medium-dark-success-color: lighten($success-color, 5%);
+$dark-success-color: darken($success-color, 25%);
+$deep-success-color: darken($success-color, 30%);
+$very-dark-success-color: darken($success-color, 40%);
+
+//WARNING-COLOR
+$warning-color: #eb1505;
+$ultra-light-warning-color: lighten($warning-color, 40%);
+$light-warning-color: lighten($warning-color, 35%);
+$medium-light-warning-color: lighten($warning-color, 25%);
+$medium-warning-color: lighten($warning-color, 15%);
+$medium-dark-warning-color: lighten($warning-color, 5%);
+$dark-warning-color: darken($warning-color, 10%);
+$deep-warning-color: darken($warning-color, 20%);
+$very-dark-warning-color: darken($warning-color, 30%);
+
+// gate-COLOR
+$gate-color: #FFCC4D;
+$ultra-light-gate-color: lighten($gate-color, 25%);
+$light-gate-color: lighten($gate-color, 20%);
+$medium-light-gate-color: lighten($gate-color, 15%);
+$medium-gate-color: lighten($gate-color, 10%);
+$medium-dark-gate-color: lighten($gate-color, 5%);
+$dark-gate-color: darken($gate-color, 10%);
+$deep-gate-color: darken($gate-color, 20%);
+$very-dark-gate-color: darken($gate-color, 30%);
+
+$border-input: #DDDDDD;
+
+// STAUS COLORS - DOCS
+$cor-cinza-status: #939598;
+$cor-laranja-escuro: #FF7F00;
+$cor-verde-claro: #63C29D;
+$cor-vermelho: #eb1505;
+$cor-vermelho-claro: #fac2bb;
+$cor-vermelho-escuro: #621b16;
+$cor-branco: #ffffff;
+$cor-cinza-claro: lighten(#888888, 30%);
+$cor-verde-escuro: #4DAF28;
+$cor-verde: #4CAF50;
+$cor-azul: #2196F3;
+$cor-amarelo-escuro: #FFCC4E;
+$cor-azul-marinho:#353B68;
+$cor-vermelho-escuro: #FF0000;
+$cor-preto: #00000085;
+
+// gate Cores
+$gate-color-primary: #062F48;
+$gate-color-secondary: #F57000;
+
+$size-1: .0625em;
+$size-2: .125em;
+$size-3: .1875em;
+$size-4: .25em;
+$size-5: .3125em;
+$size-6: .375em;
+$size-7: .4375em;
+$size-8: .5em;
+$size-9: .5625em;
+$size-10: .625em;
+$size-11: .6875em;
+$size-12: .75em;
+$size-13: .8125em;
+$size-14: .875em;
+$size-15: .9375em;
+$size-16: 1em;
+$size-17: 1.0625em;
+$size-18: 1.125em;
+$size-19: 1.1875em;
+$size-20: 1.25em;
+$size-22: 1.375em;
+$size-23: 1.4375em;
+$size-24: 1.5em;
+$size-25: 1.5625em;
+$size-26: 1.625em;
+$size-27: 1.675em;
+$size-28: 1.75em;
+$size-30: 1.875em;
+$size-31: 1.9375em;
+$size-32: 2em;
+$size-33: 2.0625em;
+$size-34: 2.125em;
+$size-37: 2.25em;
+$size-39: 2.375em;
+$size-41: 2.5em;
+$size-42: 2.5625em;
+$size-43: 2.625em;
+$size-44: 2.675em;
+$size-45: 2.75em;
+$size-47: 2.875em;
+$size-70: 4.375em;
+
+$radius: $size-8;
+
+$largura-menu: 20em;
+
+$largura-scroll: 0.5rem;

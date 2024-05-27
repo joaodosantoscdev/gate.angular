@@ -1,0 +1,23 @@
+@import './../variables';
+
+.mat-tooltip {
+  background-color: $light-main-font-color;
+  color: $medium-dark-main-font-color !important;
+  font-size: $size-8 !important;
+  font-family: 'KanitLight' !important;
+}
+
+.custom-tooltip {
+  top: 0 !important;
+}
+
+.warning-tooltip {
+  background-color: $medium-light-secondary-color;
+  font-size: $size-14;
+  top: 20px !important;
+  padding-top: 20px !important;
+}
+
+.primary-tooltip {
+  top: 20px !important;
+}

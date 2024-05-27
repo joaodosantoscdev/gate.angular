@@ -1,0 +1,33 @@
+@import "../variables";
+
+mat-checkbox[color="primary"].checkbox-frame-primary > label.mat-checkbox-layout > span.mat-checkbox-inner-container {
+  > span.mat-checkbox-frame {
+    border-color: $main-color !important;
+  }
+}
+
+mat-checkbox.checkbox-rounded > label.mat-checkbox-layout > span.mat-checkbox-inner-container {
+  > span.mat-checkbox-frame {
+    border-radius: 5px !important;
+  }
+}
+
+mat-checkbox.checkbox-lg > label.mat-checkbox-layout > span.mat-checkbox-inner-container {
+  height: 20px !important;
+  width: 20px !important;
+}
+
+mat-checkbox.checkbox-md > label.mat-checkbox-layout > span.mat-checkbox-inner-container {
+  height: inherit !important;
+  width: inherit !important;
+}
+
+mat-checkbox.checkbox-sm > label.mat-checkbox-layout > span.mat-checkbox-inner-container {
+  height: 12px !important;
+  width: 12px !important;
+}
+
+mat-checkbox.mat-checkbox-label {
+  font-family: 'KanitLight' !important;
+  font-size: $size-12 !important;
+}

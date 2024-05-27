@@ -1,0 +1,59 @@
+@import '../variables';
+
+.mat-raised-button {
+  font-size: $size-15 !important;
+  box-shadow: 0 $size-2 $size-2 rgba(0, 0, 0, 0.14) !important;
+  text-transform: uppercase;
+  padding: $size-8 $size-12 !important;
+  border-radius: $size-16 !important;
+  font-weight: 600 !important;
+}
+.mat-raised-button[color="primary"] {
+  color: $white-color !important;
+  background-color: $secondary-color;
+}
+
+.mat-card .mat-raised-button, .dialog .mat-raised-button {
+  border-radius: $size-13 !important;
+  padding: 0 $size-20 0 $size-20 !important;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.btn-add-cnpjs {
+  font-size: $size-15 !important;
+  box-shadow: 0 $size-2 $size-2 rgba(0, 0, 0, 0.14) !important;
+  text-transform: uppercase;
+  padding: $size-8 $size-12 !important;
+  background-color: $deep-success-color !important;
+  color: $white-color !important;
+  display: flex !important;
+  align-items: center !important;
+  border-radius: $size-6 !important;
+
+  .mat-button-wrapper {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-family: 'KanitRegular' !important;
+    font-size: $size-14 !important;
+  }
+
+  .mat-icon {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
+
+button.mat-icon-button {
+  border-radius: 8px;
+}
+
+.mat-stroked-button {
+  font-weight: 600 !important;
+  font-size: $size-15 !important;
+  padding: $size-8 $size-12 !important;
+  border-radius: $size-16 !important;
+  border: solid $size-1 $medium-dark-main-font-color !important;
+}

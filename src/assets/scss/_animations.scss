@@ -1,0 +1,152 @@
+@import './variables';
+
+/*#region Top */
+
+.animate-to-top {
+  @include animate-to-top;
+}
+
+@keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY($size-25);
+    transform: translateY($size-25);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/*#endregion */
+
+/*#region Right */
+
+.animate-to-right {
+  @include animate-to-right;
+}
+
+@keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(-$size-25);
+    transform: translateX(-$size-25);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/*#endregion */
+
+/*#region Bottom */
+
+.animate-to-bottom {
+  @include animate-to-bottom;
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(-$size-25);
+    transform: translateY(-$size-25);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/*#endregion */
+
+/*#region Left */
+
+.animate-to-left {
+  @include animate-to-left;
+}
+
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX($size-25);
+    transform: translateX($size-25);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+/*#endregion */
+
+/* #region others */
+.blur {
+  animation: blur 0.3s forwards;
+  pointer-events: none;
+}
+
+@keyframes blur {
+  0%{
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    -o-filter: blur(0px);
+    -ms-filter: blur(0px);
+  }
+  50% {
+    -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -o-filter: blur(1px);
+    -ms-filter: blur(1px);
+  }
+  100% {
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+    -ms-filter: blur(3px);
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 300ms;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bell-ring {
+  0%, 100% {
+      transform: rotate(0deg);
+  }
+
+  20%, 60% {
+      transform: rotate(6deg);
+  }
+
+  40%, 80% {
+      transform: rotate(-6deg);
+  }
+}
+
+.animate-border-verify {
+  border-bottom: 2px solid #00AC8F;
+  animation: animate-scale 1s ease-in-out alternate;
+}
+/* #endregion */

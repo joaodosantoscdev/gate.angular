@@ -1,0 +1,79 @@
+th.mat-header-cell {
+  &.content-center {
+    text-align: center !important;
+  }
+}
+
+div.mat-tab-label-content {
+  font-family: 'KanitBold' !important;
+  font-size: $size-16 !important;
+  color: $main-color !important;
+}
+
+mat-hint {
+  font-family: 'KanitRegular' !important;
+  font-size: .840em !important;
+}
+
+td.mat-cell, mat-cell {
+  padding-left: 0 !important;
+  border: none !important;
+  text-align: start !important;
+  text-align: start !important;
+  font-size: $size-12 !important;
+
+  &.content-center {
+    text-align: center !important;
+  }
+
+  &.ellipse-text {
+    white-space: nowrap !important;
+    overflow-x: hidden !important;
+    text-overflow: ellipsis !important;
+    max-width: 8em !important;
+  }
+
+  &:last-of-type {
+    padding-right: 0 !important;
+  }
+
+  &:first-of-type {
+    padding-left: 0 !important;
+  }
+
+  &.value-field {
+    color: $medium-light-main-font-color !important;
+  }
+}
+
+th.mat-header-cell, mat-header-cell {
+  margin:  0 $size-8 !important;
+  padding-bottom: $size-6;
+  border: none !important;
+  z-index: 0 !important;
+  font-size: $size-14 !important;
+  color: $medium-main-font-color !important;
+  font-weight: 500 !important;
+
+  &:last-of-type {
+    padding-right: 0 !important;
+  }
+
+  &:first-of-type {
+    padding-left: 0 !important;
+  }
+}
+
+tr {
+  &.mat-row {
+    height: $size-32 !important;
+
+    @media (max-width: $break-desktop-md) {
+      height: $size-33 !important;
+    }
+  }
+
+  &.mat-header-row {
+    height: $size-30 !important;
+  }
+}

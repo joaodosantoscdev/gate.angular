@@ -1,0 +1,63 @@
+@use "@angular/material" as mat;
+@include mat.core();
+
+$my-primary: mat.define-palette($gate-palette-primary, 500);
+$my-accent: mat.define-palette($gate-palette-secondary, 600);
+$my-warn: mat.define-palette(mat.$red-palette);
+$my-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $my-primary,
+      accent: $my-accent,
+      warn: $my-warn,
+    ),
+  )
+);
+
+.mat-hint.search-alert {
+  color: #474272;
+  font-family: 'KanitRegular' !important;
+  font-size: $size-14 !important;
+}
+
+.mat-hint.search-success {
+  color: #00AC8F;
+  font-family: 'KanitRegular' !important;
+  font-size: $size-14 !important;
+}
+
+.gate-loading-hint > .hint-loading {
+  height: 14px;
+}
+
+.gate-loading-hint {
+  .mat-icon {
+    font-size: 14px;
+
+    img {
+      height: 14px;
+      border: 1px solid red;
+    }
+  }
+  label {
+    vertical-align: super;
+    margin-left: 4px;
+    font-size: 14px;
+  }
+}
+
+// Emit styles for MatButton based on `$my-theme`. Because the configuration
+// passed to `define-light-theme` omits typography, `button-theme` will not
+// emit any typography styles.
+// @include mat.button-theme($my-theme)
+
+@include mat.all-component-themes($my-theme);
+@include mat.snack-bar-theme($my-theme);
+
+.mat-dialog-container {
+  border-radius: 10px !important;
+}
+
+.mat-expansion-panel-header {
+  font-size: inherit;
+}

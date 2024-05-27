@@ -1,0 +1,207 @@
+// OLIM-1312 - ESTES ARQUIVOS CONTIDOS NA PASTA (./file-input)
+// FORAM MANTIDOS POIS POSSUEM UM ACERVO MUITO BOM
+// DE ORGANIZAÇÃO DE SCSS E MIXINS UTEIS
+// SERÁ ABERTO UM TICKET PARA REMOVER O QUE FOR NECESSÁRIO
+// E MOVER OQUE FOR ÚTIL
+
+/*Vendor - first*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import "../font-awesome/_all.scss";
+
+/*Common*/
+@import "_animate";
+@import "_common";
+
+.file-upload {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+
+  .file-upload-box {
+      @include animate;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      min-height: 54px;
+
+      &.upload-box-field {
+        @include animate;
+        position: relative;
+        align-items: center;
+        padding: 0 0 0 0;
+        min-height: 54px;
+      }
+
+      &.box-button {
+          @include rounded-left;
+          @include rounded-right;
+          background-color: $secondary-color;
+          cursor: pointer;
+          display: flex;
+          @media (max-width: $break-desktop-md) {
+            width: 35%;
+          }
+          width: 25%;
+
+          .for-input-label {
+              display: inherit;
+              flex-direction: column;
+              height: 5em;
+              width: 100%;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              align-items: center;
+              justify-content: center;
+              font-family: 'KanitLight' !important;
+              Font-size: $size-14 !important;
+          }
+
+          &.blocked {
+              border: 2px solid $filters-color;
+              background-color: $filters-color;
+              cursor: default;
+          }
+      }
+
+      &.box-field {
+          border-bottom: 1px solid $filters-color;
+          overflow: hidden;
+          display: inline-block;
+          @media (max-width: $break-desktop-md) {
+            width: 64%;
+          }
+          width: 74%;
+          min-height: 40px;
+          justify-self: flex-start;
+          &.blocked {
+              border: 2px solid $filters-color;
+          }
+          &.verified {
+            border-bottom: 1px solid $details-color;
+            pointer-events: none;
+          }
+          .box-field-content {
+              display: flex;
+              height: 100%;
+              width: 100%;
+              align-items: flex-end;
+          }
+      }
+
+      &:not(.blocked) {
+          .file-icon {
+              margin-left: -2px;
+              background-color: $color-secondary;
+              color: $white-color;
+              cursor: pointer;
+          }
+
+          .file-text-icon {
+              justify-self: center;
+              color: $white-color;
+              cursor: pointer;
+          }
+      }
+
+      .file-icon {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          align-self: center;
+          padding-right: 10px;
+          padding-left: 10px;
+          font-size: 1rem;
+      }
+
+      .file-text-icon {
+          @include fluid-property('font-size', 1rem, 1rem, 1rem, 1rem);
+          font-weight: 500;
+          padding-top: 4px;
+          z-index: 1;
+          padding-right: 4px;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          font-family: 'KanitLight' !important;
+          Font-size: $size-16 !important;
+
+          & span.file-title-btn {
+            display: flex;
+            height: 1.5em;
+            align-items: end;
+            font-family: 'KanitLight' !important;
+            Font-size: 1.1675 !important;
+          }
+      }
+
+      .info {
+          flex-grow: 1;
+          margin: 0px 12px 0px 12px;
+          font-size: 12px;
+          overflow: hidden;
+      }
+
+      .label-file-name,
+      .label-info {
+          display: inline-block;
+          text-overflow: ellipsis;
+          vertical-align: top;
+          overflow: hidden;
+          white-space: nowrap;
+          font-family: 'KanitLight' !important;
+          font-size: $size-19 !important;
+      }
+
+      .label-file-name {
+          padding-bottom: 0.5rem;
+          color: $color-main-text;
+          font-family: 'KanitLight' !important;
+          font-size: 1.1675em !important;
+      }
+
+      .label-info {
+          color: $medium-light-main-font-color;
+      }
+
+      .download-icon, .minus-icon {
+          @include animate;
+          margin-right: 3px;
+          padding: 8px;
+          font-size: 18px;
+          color: $secondary-color;
+          cursor: pointer;
+
+          &:hover {
+              transform: scale(1.1);
+          }
+      }
+
+      .verified-icon {
+        margin-right: 3px;
+        padding: 8px;
+        font-size: 18px;
+        color: $deep-details-color;
+      }
+
+      input {
+          display: none;
+      }
+  }
+}
+
+:root {
+  --main-color: $main-color;
+  --light-main-color: $light-main-color;
+  --dark-main-color: $dark-main-color;
+  --deep-main-color: $deep-main-color;
+  --secondary-color: $secondary-color;
+  --light-secondary-color: $light-secondary-color;
+  --dark-secondary-color: $dark-secondary-color;
+  --color-secondary-opaque: $color-secondary-opaque;
+  --main-font-color: $main-font-color;
+  --deep-secondary-colort: $deep-secondary-color;
+  --deep-details-color: $deep-details-color;
+  --dark-gate-color: $dark-gate-color;
+}

@@ -1,0 +1,368 @@
+@import './variables';
+
+//FONT CONFIG
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+//SCROLL STYLE
+/* width */
+::-webkit-scrollbar {
+  width: $largura-scroll;
+}
+
+/* Bottom */
+::-webkit-scrollbar:horizontal {
+  height: $largura-scroll;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $light-main-font-color;
+  border-radius: 20px;
+  height: auto;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $medium-main-font-color;
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $medium-main-font-color;
+}
+
+// Aplica cor do texto para todo body
+body {
+  color: $main-font-color;
+}
+
+// Aplicando fonte Mulish Regular para tags de TEXTO
+p, small {
+  font-family: 'KanitLight' !important;
+}
+
+button {
+  font-family: 'KanitRegular' !important;
+  font-size: $size-14 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'KanitBold' !important;
+}
+
+// cria os '...' tres pontinhos quando o texto ultrapassar o tamanho da div
+.text-ellipisis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// Centraliza o elemento filho da div que tiver essa classe
+.child-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Centraliza texto - nao funciona com <span>
+.text-center {
+  text-align: center;
+}
+
+.b-none {
+  border: none;
+}
+
+// FONTS
+// Classes de font
+.font-5 {
+  font-size: $size-5;
+}
+.font-6 {
+  font-size: $size-6;
+}
+.font-7 {
+  font-size: $size-7;
+}
+.font-8 {
+  font-size: $size-8;
+}
+.font-9 {
+  font-size: $size-9;
+}
+.font-10 {
+  font-size: $size-10;
+}
+.font-11 {
+  font-size: $size-11;
+}
+.font-12 {
+  font-size: $size-12;
+}
+.font-13 {
+  font-size: $size-13;
+}
+.font-14 {
+  font-size: $size-14;
+}
+.font-15 {
+  font-size: $size-15;
+}
+.font-16 {
+  font-size: $size-16;
+}
+.font-17 {
+  font-size: $size-17;
+}
+.font-18 {
+  font-size: $size-18;
+}
+.font-20 {
+  font-size: $size-20;
+}
+.font-22 {
+  font-size: $size-22;
+}
+.font-25 {
+  font-size: $size-25;
+}
+.font-26 {
+  font-size: $size-26;
+}
+.font-30 {
+  font-size: $size-30;
+}
+
+// WEIGHT
+.font-300 {
+  font-weight: 300;
+}
+.font-400 {
+  font-weight: 400;
+}
+.font-500 {
+  font-weight: 500;
+}
+.font-600 {
+  font-weight: 600;
+}
+.font-700 {
+  font-weight: 700;
+}
+
+// Facilitadores para aplicar a font
+.font-subtitulo {
+  font-family: 'KanitBold' !important;
+}
+
+.font-titulo {
+  font-family: 'KanitBold' !important;
+  font-size: $size-22;
+}
+
+// Cores
+.cor-texto {
+  color: $main-font-color;
+}
+
+.cor-texto-claro {
+  color: $white-color;
+}
+
+.color-marine-blue {
+  color: $deep-success-color;
+}
+
+.color-primary {
+  color: $main-color !important;
+}
+
+.color-secondary {
+  color: $secondary-color !important;
+}
+
+.color-gate-yellow {
+  color: $gate-color;
+}
+
+.color-warn {
+  color: $warning-color;
+}
+
+// texto underline
+.text-underline {
+  text-decoration: underline;
+}
+
+.btn-toggle {
+  color:  $deep-main-font-color;
+  border: none;
+}
+
+.btn-toggle:hover {
+  color: $main-color;
+  transition: all .1s ease-in-out;
+}
+
+.d-hidden {
+  display: none;
+}
+
+// VH Heights
+.vh-40 {
+  height: 40vh;
+}
+
+.vh-80 {
+  height: 80vh;
+}
+
+.text-muted {
+  color:$medium-main-font-color;
+}
+
+.align-vertically-between {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.overflow-scroll-container {
+  width: 100%;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.status-0 {
+  color: $medium-light-main-font-color;
+}
+
+.status-1 {
+  color: $dark-secondary-color;
+}
+
+.status-3 {
+  color: $dark-details-color;
+}
+
+.status-4 {
+  color: $warning-color;
+}
+
+.status-5 {
+  color: $warning-color;
+}
+
+.status-unknow {
+  color: $white-color;
+}
+
+.status-7 {
+  color: $very-dark-details-color;
+}
+
+.status-8 {
+  color: $deep-details-color;
+}
+
+.status-10 {
+  color: $ultra-light-success-color;
+}
+
+.status-11 {
+  color: $dark-gate-color;
+  background-color: $light-details-color;
+}
+
+.status-9 {
+  color: $very-dark-success-color;
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.h-min {
+  height: min-content;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.w-20 {
+  width: 20%;
+}
+
+.remove-box-shadow {
+  box-shadow: none !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.transparent-backdrop {
+  background-color: transparent;
+}
+
+
+.panel-fixed-end {
+  max-height: calc(100vh - 6em) !important;
+  width: 28em !important;
+  position: absolute !important;
+  top: 5em !important;
+  right: 1em !important;
+
+  .mat-dialog-container {
+    padding: 10px 10px 10px 20px;
+  }
+}
+
+//SKELETON
+.skeleton {
+  animation: skeleton-loading .8s linear infinite alternate;
+}
+
+.static-skeleton {
+  background-color: lighten(#ddd, 5%);
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: #ddd;
+  }
+  100% {
+    background-color: #eeeeee;
+  }
+}
+
+@keyframes ellipsis-dot {
+  25% {
+    content: "";
+  }
+  50% {
+    content: ".";
+  }
+  75% {
+    content: "..";
+  }
+  100% {
+    content: "...";
+  }
+}
+
+

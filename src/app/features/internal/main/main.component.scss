@@ -1,0 +1,51 @@
+@import '/src/assets/scss/variables';
+@import '/src/assets/scss/mixins';
+@import '/src/assets/scss/utils';
+
+span {
+  font-family: 'KanitRegular';
+  font-weight: 500;
+  font-size: $size-18;
+}
+
+div.card-outlined {
+  box-shadow: none !important;
+  &.faded {
+    transition: all .3s ease-in-out;
+    border-color: lighten($ultra-light-main-font-color, 30%) !important;
+    background-color: lighten($ultra-light-main-font-color, 30%) !important;
+  }
+
+  &.no-padding {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  &:hover {
+    transition: all .3s ease-in-out;
+    border-color: lighten($ultra-light-main-font-color, 25%) !important;
+    background-color: lighten($ultra-light-main-font-color, 25%) !important;
+  }
+}
+
+mat-icon.user-image {
+  font-size: 8em;
+  height: auto;
+  width: auto;
+  border-right: 2px $ultra-light-main-font-color solid;
+}
+
+mat-icon.access {
+  padding-top: .1em;
+  font-size: 6em;
+  height: auto;
+  width: 1em;
+
+  &.in {
+    color: $cor-verde;
+  }
+
+  &.out {
+    color: $warning-color;
+  }
+}

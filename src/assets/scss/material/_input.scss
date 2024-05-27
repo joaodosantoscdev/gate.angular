@@ -1,0 +1,30 @@
+@import '../variables';
+
+mat-form-field.mat-form-field.field-flex-padding-top-0 {
+  .mat-form-field-flex {
+    padding-top: 0 !important;
+    font-family: 'KanitLight' !important;
+    font-size: $size-14 !important;
+  }
+}
+
+mat-form-field {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  font-family: 'KanitLight' !important;
+  font-size: $size-14 !important;
+}
+
+input.mat-input-element {
+  font-family: 'KanitLight' !important;
+  font-size: $size-14 !important;
+}
+
+.mat-form-field-flex {
+  padding-top: $size-12 !important;
+}
+
+.mat-form-field-label {
+  color: $main-font-color !important;
+}

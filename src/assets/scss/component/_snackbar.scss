@@ -1,0 +1,31 @@
+snack-bar-container span {
+  font-family: "KanitLight" !important;
+  font-size: $size-16 !important;
+}
+
+.snackbar-success {
+  background: #00AC8F !important;
+}
+
+.snackbar-info {
+  background: #03A9F4 !important;
+}
+
+.snackbar-warning {
+  background: #DF912E !important;
+}
+
+.snackbar-error {
+  background: #F44336 !important;
+}
+
+.snackbar-success, .snackbar-info, .snackbar-warning, .snackbar-error {
+  color: #fff !important;
+  white-space: pre-wrap;
+
+  .mat-button-wrapper {
+    color: #fff !important;
+    font-family: 'KanitRegular' !important;
+    font-size: $size-14 !important;
+  }
+}

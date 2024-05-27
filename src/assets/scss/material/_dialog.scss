@@ -1,0 +1,8 @@
+@import '../variables';
+
+div.custom-dialog-padding {
+  mat-dialog-container.mat-dialog-container {
+    padding: 12px !important;
+    border-radius: 10px !important;
+  }
+}

@@ -1,0 +1,50 @@
+@media (max-width: $break-desktop-lg) {
+  html {
+    font-size: 14px;
+  }
+}
+
+// TITULOS
+h2.title {
+  color: $main-color;
+  font-size: $size-20;
+  height: fit-content;
+  display: flex;
+}
+
+.loading:after {
+  content: "...";
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  animation: ellipsis-dot 1s infinite .3s;
+  animation-fill-mode: backwards;
+  width: $size-20;
+  text-align: left;
+}
+
+.loading-text {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5em;
+
+  .gif-loading {
+    height: $size-16;
+    width: $size-16;
+    margin-right: $size-10;
+  }
+}
+
+.icon-valid {
+  margin-right: $size-10;
+  font-size: $size-18 !important;
+}
+
+//CHIPS DE STATUS
+.doc-status {
+  padding: $size-4 0;
+  margin: $size-4 0;
+  border-radius: 15px;
+  font-family: 'KanitRegular' !important;
+  text-align: center;
+}

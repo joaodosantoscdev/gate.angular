@@ -1,0 +1,242 @@
+$radius: 5px;
+$transition-time: .5s;
+
+$break-mobile: 576px;
+$break-tablet: 768px;
+$break-phablet: 992px;
+$break-desktop-sm: 1200px;
+$break-desktop-md: 1366px;
+$break-desktop-lg: 1400px;
+
+$upload-document-footer-height-sm: 100px;
+$upload-document-footer-height-md: 180px;
+$upload-document-footer-height-lg: 260px;
+
+/*#region Colors */
+
+$ultra-light-white-color: $ultra-light-white-color;
+$light-white-color: $light-white-color;
+$color-main-text: var(--color-main-text);
+$color-main-text-light: var(--color-main-text-light);
+
+$medium-dark-warning-color: $medium-dark-warning-color;
+$medium-warning-color: $medium-warning-color;
+
+$dark-gate-color: $dark-gate-color;
+$ultra-light-main-font-color: $ultra-light-main-font-color;
+
+$dark-details-color: $dark-details-color;
+$deep-details-color: $deep-details-color;
+
+$medium-light-main-font-color: $medium-light-main-font-color;
+
+$color-primary: var(--color-primary);
+$color-primary-light: var(--color-primary-light);
+$color-primary-dark: var(--color-primary-dark);
+$color-primary-opaque: var(--color-primary-opaque);
+
+$color-secondary: var(--color-secondary);
+$color-secondary-light: var(--color-secondary-light);
+$color-secondary-dark: var(--color-secondary-dark);
+$color-secondary-opaque: var(--color-secondary-opaque);
+
+$color-verified: var(--color-verified);
+$color-unverified: var(--color-warning);
+
+/*#endregion */
+
+/*#region Fonts */
+
+@mixin font-default {
+    @include font-kanit-light;
+}
+
+@mixin font-kanit-light {
+    font-family: 'KanitLight' !important;
+}
+
+/*#endregion */
+
+@mixin rounded-icon ($size, $very-dark-main-font-color) {
+    @include animate-300;
+    @include rounded(50%);
+    min-width: $size;
+    min-height: $size;
+    line-height: $size;
+    text-align: center;
+    cursor: pointer;
+}
+
+@mixin rounded-icon-hover ($size, $very-dark-main-font-color) {
+    @include rounded-icon($size, $very-dark-main-font-color);
+
+    &:hover {
+        background-color: $very-dark-main-font-color;
+    }
+}
+
+
+
+/*#region Animate */
+
+@mixin animate-in-sequence ($for: 10, $interval: .09s) {
+    @for $i from 1 through $for {
+        &:nth-of-type(#{$i}) {
+            animation-delay: $i * $interval;
+        }
+    }
+}
+
+@mixin animate ($property: all) {
+    transition: $property .150s ease;
+}
+
+@mixin animate-50 ($property: all) {
+    transition: $property .050s ease;
+}
+
+@mixin animate-100 ($property: all) {
+    transition: $property .100s ease;
+}
+
+@mixin animate-150 ($property: all) {
+    transition: $property .150s ease;
+}
+
+@mixin animate-200 ($property: all) {
+    transition: $property .200s ease;
+}
+
+@mixin animate-300 ($property: all) {
+    transition: $property .300s ease;
+}
+
+@mixin animate-400 ($property: all) {
+    transition: $property .400s ease;
+}
+
+@mixin animate-500 ($property: all) {
+    transition: $property .500s ease;
+}
+
+/*#region Animate to */
+
+@mixin animate-to-top ($time: $transition-time) {
+    -webkit-animation: slide-in-top $time cubic-bezier(.25,.46,.45,.94) both;
+    animation: slide-in-top $time cubic-bezier(.25,.46,.45,.94) both;
+}
+
+@mixin animate-to-right ($time: $transition-time) {
+    -webkit-animation: slide-in-right $time cubic-bezier(.25,.46,.45,.94) both;
+    animation: slide-in-right $time cubic-bezier(.25,.46,.45,.94) both;
+}
+
+@mixin animate-to-bottom ($time: $transition-time) {
+    -webkit-animation: slide-in-bottom $time cubic-bezier(.25,.46,.45,.94) both;
+    animation: slide-in-bottom $time cubic-bezier(.25,.46,.45,.94) both;
+}
+
+@mixin animate-to-left ($time: $transition-time) {
+    -webkit-animation: slide-in-left $time cubic-bezier(.25,.46,.45,.94) both;
+    animation: slide-in-left $time cubic-bezier(.25,.46,.45,.94) both;
+}
+
+/*#endregion */
+
+/*#endregion */
+
+/*#region Rounded */
+
+  @mixin rounded ($r: $radius) {
+      border-radius: $r;
+  }
+
+  @mixin rounded-top ($r: $radius) {
+      border-top-left-radius: $r;
+      border-top-right-radius: $r;
+  }
+
+  @mixin rounded-right ($r: $radius) {
+      border-top-right-radius: $r;
+      border-bottom-right-radius: $r;
+  }
+
+  @mixin rounded-bottom ($r: $radius) {
+      border-bottom-left-radius: $r;
+      border-bottom-right-radius: $r;
+  }
+
+  @mixin rounded-left ($r: $radius) {
+      border-top-left-radius: $r;
+      border-bottom-left-radius: $r;
+  }
+
+@mixin rounded-top-right ($r: $radius) {
+    border-top-right-radius: $r;
+}
+
+@mixin rounded-top-left ($r: $radius) {
+    border-top-left-radius: $r;
+}
+
+@mixin rounded-bottom-right ($r: $radius) {
+    border-bottom-right-radius: $r;
+}
+
+@mixin rounded-bottom-left ($r: $radius) {
+    border-bottom-left-radius: $r;
+}
+
+/*#endregion */
+
+/*#region Media queries */
+
+@mixin media-tablet {
+  @media (max-width: #{$break-tablet}) {
+    @content;
+  }
+}
+
+@mixin media-above-tablet {
+  @media (min-width: #{$break-tablet + 1px}) {
+    @content;
+  }
+}
+
+@mixin media-desktop-sm {
+  @media (min-width: #{$break-tablet + 1px}) and (max-width: #{$break-desktop-md}) {
+    @content;
+  }
+}
+
+@mixin media-desktop-md {
+    @media (min-width: #{$break-desktop-md + 1px}) and (max-width: #{$break-desktop-lg}) {
+        @content;
+    }
+}
+
+@mixin media-desktop-lg {
+    @media (min-width: #{$break-desktop-lg + 1px}) {
+        @content;
+    }
+}
+
+@mixin fluid-property ($property, $value-xsm, $value-sm, $value-md, $value-lg) {
+    @include media-desktop-lg {
+        #{$property}: $value-lg;
+    }
+
+    @include media-desktop-md {
+        #{$property}: $value-md;
+    }
+
+    @include media-desktop-sm {
+        #{$property}: $value-sm;
+    }
+
+    @include media-tablet {
+      #{$property}: $value-xsm;
+    }
+}
+
+/*#endregion */

@@ -1,0 +1,15 @@
+@import '../variables';
+
+mat-form-field.mat-form-field.field-flex-padding-top-0 {
+  .mat-form-field-flex {
+    padding-top: 0 !important;
+  }
+}
+
+.mat-form-field-flex {
+  padding-top: $size-12 !important;
+}
+
+.mat-form-field-label {
+  color: $main-font-color !important;
+}

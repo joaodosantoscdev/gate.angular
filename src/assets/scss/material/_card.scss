@@ -1,0 +1,37 @@
+mat-card, .card {
+  box-shadow:
+    0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12) !important;
+
+  background: $white-color !important;
+
+  margin-left: $size-8 !important;
+  margin-right: $size-8 !important;
+
+  border-radius: 10px !important;
+  border-bottom: $size-8 solid $white-color !important;
+  border-top: $size-8 solid $white-color !important;
+
+  padding: $size-4 $size-16 !important;
+
+  &.has-scroll {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+  }
+
+  &.card-outline {
+    border: 2px solid $gate-color-primary !important;
+    color: $main-font-color;
+  }
+
+  &.background-color-secondary {
+    border: 2px solid $gate-color-secondary !important;
+    background: $gate-color-secondary !important;
+    color: $white-color;
+  }
+
+  &.no-shadow {
+    box-shadow: none;
+  }
+}

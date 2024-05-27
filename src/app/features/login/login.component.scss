@@ -1,0 +1,50 @@
+@import '/src/assets/scss/variables';
+@import '/src/assets/scss/mixins';
+
+span {
+  font-family: 'Roboto' !important;
+}
+
+a {
+  font-family: 'KanitLight';
+  color: $main-color;
+  font-size: $size-14;
+}
+
+div.main-container {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+div.buttons-wrapper {
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  button {
+    height: 3em;
+    width: 50%;
+
+    &.login-button {
+      margin-bottom: .5em;
+    }
+  }
+}
+
+div.login-footer {
+  @include animate-to-top(1s);
+  bottom: 0px;
+  width: 100vw;
+  height: 4em;
+  position: fixed;
+  z-index: 100;
+  color: $cor-branco;
+  background-color: $cor-preto;
+  opacity: 90%;
+}
+
+.slide-to-right {
+  @include animate-to-right(1s);
+}

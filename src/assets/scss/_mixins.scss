@@ -1,0 +1,219 @@
+$transition-time: 300ms;
+
+/* #region animations */
+@mixin animate-in-sequence ($for: 10, $interval: .09s) {
+  @for $i from 1 through $for {
+      &:nth-of-type(#{$i}) {
+          animation-delay: $i * $interval;
+      }
+  }
+}
+
+@mixin animate ($property: all) {
+  transition: $property .150s ease;
+}
+
+@mixin animate-50 ($property: all) {
+  transition: $property .050s ease;
+}
+
+@mixin animate-100 ($property: all) {
+  transition: $property .100s ease;
+}
+
+@mixin animate-150 ($property: all) {
+  transition: $property .150s ease;
+}
+
+@mixin animate-200 ($property: all) {
+  transition: $property .200s ease;
+}
+
+@mixin animate-300 ($property: all) {
+  transition: $property .300s ease;
+}
+
+@mixin animate-400 ($property: all) {
+  transition: $property .400s ease;
+}
+
+@mixin animate-500 ($property: all) {
+  transition: $property .500s ease;
+}
+
+@mixin animate-to-top ($time: $transition-time) {
+  -webkit-animation: slide-in-top $time cubic-bezier(.25,.46,.45,.94) both;
+  animation: slide-in-top $time cubic-bezier(.25,.46,.45,.94) both;
+}
+
+@mixin animate-to-right ($time: $transition-time) {
+  -webkit-animation: slide-in-right $time cubic-bezier(.25,.46,.45,.94) both;
+  animation: slide-in-right $time cubic-bezier(.25,.46,.45,.94) both;
+}
+
+@mixin animate-to-bottom ($time: $transition-time) {
+  -webkit-animation: slide-in-bottom $time cubic-bezier(.25,.46,.45,.94) both;
+  animation: slide-in-bottom $time cubic-bezier(.25,.46,.45,.94) both;
+}
+
+@mixin animate-to-left ($time: $transition-time) {
+  -webkit-animation: slide-in-left $time cubic-bezier(.25,.46,.45,.94) both;
+  animation: slide-in-left $time cubic-bezier(.25,.46,.45,.94) both;
+}
+
+@mixin animate-fadeIn ($time: $transition-time) {
+  -webkit-animation: fadeIn $time;
+  animation: fadeIn $time;
+}
+
+@mixin animate-in-sequence ($for: 20, $interval: 300ms) {
+  @for $i from 1 through $for {
+    &:nth-of-type(#{$i}) {
+      animation-delay: $i * $interval;
+    }
+  }
+}
+/*#endregion */
+
+/*#region borders */
+@mixin border($color, $radius, $type) {
+  border: $radius $color $type;
+}
+
+@mixin rounded ($r: $radius) {
+  border-radius: $r;
+}
+
+@mixin rounded-top ($r: $radius) {
+  border-top-left-radius: $r;
+  border-top-right-radius: $r;
+}
+
+@mixin rounded-right ($r: $radius) {
+  border-top-right-radius: $r;
+  border-bottom-right-radius: $r;
+}
+
+@mixin rounded-bottom ($r: $radius) {
+  border-bottom-left-radius: $r;
+  border-bottom-right-radius: $r;
+}
+
+@mixin rounded-left ($r: $radius) {
+  border-top-left-radius: $r;
+  border-bottom-left-radius: $r;
+}
+
+@mixin rounded-top-right ($r: $radius) {
+  border-top-right-radius: $r;
+}
+
+@mixin rounded-top-left ($r: $radius) {
+  border-top-left-radius: $r;
+}
+
+@mixin rounded-bottom-right ($r: $radius) {
+  border-bottom-right-radius: $r;
+}
+
+@mixin rounded-bottom-left ($r: $radius) {
+  border-bottom-left-radius: $r;
+}
+/*#endregion */
+
+/*#region Media queries */
+
+@mixin media-tablet {
+  @media (max-width: #{$break-tablet}) {
+    @content;
+  }
+}
+
+@mixin media-above-tablet {
+  @media (min-width: #{$break-tablet + 1px}) {
+    @content;
+  }
+}
+
+@mixin media-desktop-sm {
+  @media (min-width: #{$break-tablet + 1px}) and (max-width: #{$break-desktop-md}) {
+    @content;
+  }
+}
+
+@mixin media-desktop-md {
+    @media (min-width: #{$break-desktop-md + 1px}) and (max-width: #{$break-desktop-lg}) {
+        @content;
+    }
+}
+
+@mixin media-desktop-lg {
+    @media (min-width: #{$break-desktop-lg + 1px}) {
+        @content;
+    }
+}
+
+@mixin fluid-property ($property, $value-xsm, $value-sm, $value-md, $value-lg) {
+    @include media-desktop-lg {
+        #{$property}: $value-lg;
+    }
+
+    @include media-desktop-md {
+        #{$property}: $value-md;
+    }
+
+    @include media-desktop-sm {
+        #{$property}: $value-sm;
+    }
+
+    @include media-tablet {
+      #{$property}: $value-xsm;
+    }
+}
+
+/*#endregion */
+
+@mixin child-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin font($weight, $size, $family) {
+  font-weight: $weight;
+  font-size: $size;
+  font-family: $family;
+}
+
+@mixin shadow ($level: 1) {
+  @if $level == 1 {
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+  }
+  @else if $level == 2 {
+      box-shadow: 3px 3px 15px rgba(0,0,0,0.05), 3px 3px 15px rgba(0,0,0,0.07);
+  }
+  @else if $level == 3 {
+      box-shadow: 0 10px 25px rgba(0,0,0,0.19), 0 6px 15px rgba(0,0,0,0.23);
+  }
+  @else if $level == 4 {
+      box-shadow: 0 14px 32px rgba(0,0,0,0.25), 0 10px 15px rgba(0,0,0,0.22);
+  }
+  @else if $level == 5 {
+      box-shadow: 0 19px 42px rgba(0,0,0,0.30), 0 15px 17px rgba(0,0,0,0.22);
+  }
+}
+
+@mixin card {
+  @include rounded;
+  padding: 15px;
+  background-color: $white-color;
+}
+
+@mixin text-overflow {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+

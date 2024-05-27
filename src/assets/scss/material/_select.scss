@@ -1,0 +1,130 @@
+﻿@import '../variables';
+@import '../utils';
+@import '../mixins';
+
+.cdk-overlay-pane, .cdk-overlay-pane .mat-select-panel-wrap {
+  pointer-events: none;
+  user-select: none;
+  touch-action: none;
+
+  * {
+    pointer-events: auto;
+    user-select: auto;
+    touch-action: auto;
+  }
+}
+
+mat-select {
+  font-family: "KanitLight" !important;
+  font-size: $size-14 !important;
+}
+
+div.mat-select-panel {
+  overflow-x: hidden !important;
+
+  &.filter-panel {
+    border: 6px solid $white-color !important;
+    border-radius: 8px !important;
+
+    div.search-input-container {
+      margin-bottom: 0 !important;
+      padding: 0 .5em;
+
+      mat-form-field.mat-form-field .mat-form-field-flex {
+        align-items: center;
+        font-size: $size-14;
+
+        mat-icon.mat-icon {
+          color: $medium-main-font-color;
+        }
+
+        div.mat-form-field-outline {
+          opacity: 1;
+
+          div.mat-form-field-outline-start {
+            border-radius: 8px 0 0 8px;
+            border: 2px solid $medium-main-font-color;
+            opacity: 60%;
+            border-right: none;
+            min-width: 8px;
+          }
+
+          div.mat-form-field-outline-end {
+            margin-left: -1px;
+            border: 2px solid $medium-main-font-color;
+            border-left: none;
+            opacity: 60%;
+            border-radius: 0 8px 8px 0;
+          }
+        }
+      }
+
+      input.mat-input-element {
+        @include font(500, $size-14, 'Kanit Light');
+
+        &.select-search-input {
+          height: fit-content;
+          padding-left: 1em;
+          position: fixed;
+        }
+      }
+    }
+  }
+
+  mat-option.mat-option {
+    @include font(500, $size-14, 'KanitLight');
+    height: 2em;
+  }
+
+  &.number-panel {
+    transform: translateX(30px) translateY(45px) !important;
+  }
+
+  &.document-group-panel {
+    transform: translateX(30px) translateY(45px) !important;
+  }
+
+  &.payer-description-panel {
+    transform: translateX(30px) translateY(45px) !important;
+  }
+
+  &.document-status-panel {
+    transform: translateX(30px) translateY(45px) !important;
+  }
+
+  &.period-panel {
+    transform: translateX(7px) translateY(45px) !important;
+  }
+
+  &.cancel-select-panel {
+    transform: translateX(7px) translateY(45px) !important;
+  }
+
+  div.options-container {
+    max-height: 12em;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  div.options-container-filter {
+    max-height: 12em;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-family: 'KanitLight' !important;
+  }
+}
+
+div.search-input-container {
+  margin-bottom: 3em;
+
+  input.mat-input-element {
+    &.select-search-input {
+      height: 3em;
+      width: fit-content;
+      padding-left: 1em;
+      position: fixed;
+      font-family: 'KanitLight' !important;
+      font-size: $size-14 !important;
+    }
+  }
+}
