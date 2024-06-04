@@ -34,9 +34,12 @@
           <input
             formControlName="password"
             matInput
-            type="password"
+            [type]="inputType"
             placeholder="*******"
           />
+          <button class="me-2" matSuffix mat-icon-button (click)="changeInputType()">
+            <i class="font-20" [ngClass]="inputType == 'password' ? 'fas fa-eye' : 'fas fa-eye-slash'"></i>
+          </button>
         </mat-form-field>
 
         <div class="d-flex justify-content-end">
@@ -46,7 +49,7 @@
           <button (click)="login(form.value)" class="login-button" mat-flat-button color="accent">
             <span>Login</span>
           </button>
-          <button class="signin-button" mat-stroked-button color="primary">
+          <button *ngIf="false" class="signin-button" mat-stroked-button color="primary">
             <span>Criar conta</span>
           </button>
         </div>

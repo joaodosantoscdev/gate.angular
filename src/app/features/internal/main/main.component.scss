@@ -2,6 +2,50 @@
 @import '/src/assets/scss/mixins';
 @import '/src/assets/scss/utils';
 
+.table-container {
+  height: calc(100vh - 26.8em);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+table.access-table {
+  tr.mat-mdc-header-row {
+    height: 40px !important;
+  }
+
+  tr:not(.mat-mdc-header-row) {
+    transition: all .2s ease-in-out;
+    height: 40px !important;
+
+    .mat-mdc-icon-button {
+      height: 40px !important;
+      mat-icon {
+        font-size: 1.25rem;
+      }
+    }
+
+    &:hover {
+      transition: all .2s ease-in-out;
+      background-color: lighten($ultra-light-main-font-color, 30%);
+    }
+  }
+
+  th {
+    font-family: 'KanitBold' !important;
+    font-weight: 500;
+    font-size: $size-18;
+    color: $main-color;
+    border-bottom-color: transparent;
+  }
+
+  td.mat-mdc-cell {
+    border: 2px transparent solid !important;
+    font-family: 'KanitLight' !important;
+    font-weight: 500;
+    font-size: $size-14;
+  }
+}
+
 span {
   font-family: 'KanitRegular';
   font-weight: 500;
@@ -10,42 +54,28 @@ span {
 
 div.card-outlined {
   box-shadow: none !important;
-  &.faded {
-    transition: all .3s ease-in-out;
-    border-color: lighten($ultra-light-main-font-color, 30%) !important;
-    background-color: lighten($ultra-light-main-font-color, 30%) !important;
-  }
 
   &.no-padding {
     padding: 0 !important;
     margin: 0 !important;
   }
-
-  &:hover {
-    transition: all .3s ease-in-out;
-    border-color: lighten($ultra-light-main-font-color, 25%) !important;
-    background-color: lighten($ultra-light-main-font-color, 25%) !important;
-  }
 }
 
-mat-icon.user-image {
-  font-size: 8em;
+mat-icon.user-no-image {
+  font-size: 9em;
   height: auto;
   width: auto;
-  border-right: 2px $ultra-light-main-font-color solid;
 }
 
-mat-icon.access {
-  padding-top: .1em;
-  font-size: 6em;
-  height: auto;
-  width: 1em;
-
-  &.in {
-    color: $cor-verde;
-  }
-
-  &.out {
-    color: $warning-color;
-  }
+img.last-user-image {
+  @include rounded(10%);
+  width: 10em;
 }
+
+
+div.spinner-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+

@@ -1,0 +1,75 @@
+<div class="my-2">
+  <div class="card me-2 mb-2">
+    <div [formGroup]="form" class="d-flex align-items-start my-2">
+      <mat-form-field>
+        <mat-label>Pesquisar</mat-label>
+        <mat-hint>Voce pode utilizar o documento ou nome do acessante para iniciar uma pesquisa</mat-hint>
+        <input placeholder="informe o nome ou número do documento" formControlName="search" matInput type="text">
+        <mat-icon matSuffix class="mat-18">search</mat-icon>
+      </mat-form-field>
+      <!-- <button class="new-user-button mx-3" mat-flat-button color="accent">
+        <span class="px-4">Criar</span>
+      </button> -->
+    </div>
+  </div>
+  <div class="residents-wrapper">
+    <ng-container *ngIf="residents && residents.length">
+      <ng-container *ngFor="let resident of residents">
+        <div (click)="navigateToUser(resident.id)" class="card card-outlined faded mb-2 cursor-pointer">
+          <div class="row">
+            <div class="col-auto">
+              <img *ngIf="!!resident.photoBase64" class="last-user-image" src="{{'data:image/jpeg;base64,'+ resident.photoBase64}}" alt="last-user-image">
+              <mat-icon class="user-no-image" *ngIf="!resident.photoBase64">account_box</mat-icon>
+            </div>
+            <div class="col-lg-2 col-md-6">
+              <div class="row my-3 font-14">
+                <span class="font-600">Nome:</span>
+                <span class="text-muted">{{ resident?.name ? resident.name : 'Nenhum' }}</span>
+              </div>
+              <div class="row my-3 font-14">
+                <span class="font-600">Informações de contato:</span>
+                <span class="text-muted">{{ resident?.contacts?.length ? resident.contacts[0]?.email : 'Não informado' }}</span>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-6">
+              <div class="row my-3 font-14">
+                <span class="font-600">Sobrenome:</span>
+                <span class="text-muted">{{ resident?.lastName ? resident?.lastName : 'Nenhum'  }}</span>
+              </div>
+              <div class="row my-3 font-14">
+                <span>&nbsp;</span>
+                <span  class="text-muted">{{ resident?.contacts ? (resident.contacts[0]?.phone ?? '' | mask : '(00) 0000-0000||(00) 00000-0000') : 'Não informado' }}</span>
+              </div>
+
+            </div>
+            <div class="col-lg-2 col-md-6">
+              <div class="row my-3 font-14">
+                <span class="font-600">Documento:</span>
+                <span class="text-muted">{{ resident?.documentNumber ? (resident?.documentNumber! | mask : '000.000.000-00') : '000.000.000-00' }}</span>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-6">
+              <div class="row my-3 font-14">
+                <span class="font-600">Nível de acesso:</span>
+                <span class="text-muted">{{ resident?.type ? resident?.type : 'Desconhecido' }}</span>
+              </div>
+
+            </div>
+            <div class="col-lg-2 col-md-6">
+              <div class="row my-3 font-14">
+                <span class="font-600">Token:</span>
+                <span class="text-muted">{{ resident?.token != '00000000-0000-0000-0000-000000000000' ? 'Possui' : 'Não possui' }}</span>
+              </div>
+            </div>
+            <!-- <div class="col-lg-2 col-md-6">
+              <div class="row my-3 font-14">
+                <button mat-icon-button color="accent"><mat-icon>more</mat-icon></button>
+                <button mat-icon-button color="warn"><mat-icon>delete</mat-icon></button>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </ng-container>
+    </ng-container>
+  </div>
+</div>

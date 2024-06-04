@@ -3,23 +3,29 @@ snack-bar-container span {
   font-size: $size-16 !important;
 }
 
+
 .snackbar-success {
-  background: #00AC8F !important;
+  --mdc-snackbar-container-color: #00AC8F !important;
 }
 
 .snackbar-info {
-  background: #03A9F4 !important;
+  --mdc-snackbar-container-color: #03A9F4 !important;
 }
 
 .snackbar-warning {
-  background: #DF912E !important;
+  --mdc-snackbar-container-color: #DF912E !important;
 }
 
 .snackbar-error {
-  background: #F44336 !important;
+  --mdc-snackbar-container-color: #F44336 !important;
+
 }
 
 .snackbar-success, .snackbar-info, .snackbar-warning, .snackbar-error {
+  --mdc-snackbar-supporting-text-color: #fff !important;
+  --mat-mdc-snack-bar-button-color: #fff !important;
+  font-family: "KanitLight" !important;
+  font-size: $size-16 !important;
   color: #fff !important;
   white-space: pre-wrap;
 

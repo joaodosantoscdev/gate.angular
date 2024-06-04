@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit {
 
   form!: FormGroup;
   destroyed$: Subject<boolean> = new Subject<boolean>();
+  inputType = 'password';
 
   constructor(
     private fb: FormBuilder,
@@ -45,6 +46,10 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['internal', 'main']);
       }
     );
-   }
+  }
+
+  changeInputType(): void {
+    this.inputType == 'text' ? this.inputType = 'password' : this.inputType = 'text';
+  }
 }
 

@@ -17,7 +17,6 @@ import { HeaderComponent } from './header.component';
       RouterModule,
       CommonModule,
       ReactiveFormsModule,
-      FormsModule,
       MatMenuModule,
       MatButtonModule,
       MatIconModule,

@@ -1,0 +1,33 @@
+@import '/src/assets/scss/variables';
+@import '/src/assets/scss/utils';
+@import '/src/assets/scss/mixins';
+
+.cards-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+div.card-outlined {
+  border: 3px $main-font-color solid !important;
+  box-shadow: none !important;
+
+}
+
+div.card-number {
+  @include rounded(20px);
+  width: 16rem;
+  height: 12em;
+
+  &.border-accent {
+    border-color: $secondary-color !important;
+  }
+
+  div.info-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+}

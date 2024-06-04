@@ -42,7 +42,7 @@ body {
 }
 
 // Aplicando fonte Mulish Regular para tags de TEXTO
-p, small {
+p, small, a {
   font-family: 'KanitLight' !important;
 }
 
@@ -171,7 +171,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .cor-texto-claro {
-  color: $white-color;
+  color: $cor-branco;
 }
 
 .color-marine-blue {
@@ -332,6 +332,10 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.rotate-90 {
+  transform: rotate(-90deg);
+}
+
 //SKELETON
 .skeleton {
   animation: skeleton-loading .8s linear infinite alternate;
@@ -365,4 +369,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-
+.enabled {
+  color: $main-font-color !important;
+}

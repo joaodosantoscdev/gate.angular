@@ -1,0 +1,109 @@
+<div class="card-container fadeIn">
+  <mat-card>
+    <div class="header-container mb-2">
+    </div>
+    <form [formGroup]="form">
+      <div class="row">
+        <div class="col-6">
+          <div class="cam-container">
+            <div class="video-wrapper">
+              <video  #video autoplay></video>
+              <div class="video-button-container">
+                <button class="photo-button" mat-icon-button (click)="capture()">
+                  <mat-icon>camera_alt</mat-icon>
+                </button>
+              </div>
+            </div>
+            <canvas class="d-hidden" width="500" height="500" #canvas></canvas>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="form-container">
+            <div class="form wrapper">
+              <mat-form-field appearance="fill">
+                <mat-label>CPF</mat-label>
+                <input placeholder="000.000.000-00" mask="000.000.000-00" formControlName="documentNumber" matInput type="text">
+                <mat-error *ngIf="form.get('documentNumber')?.errors">{{ form.get('documentNumber')?.errors | error }}</mat-error>
+              </mat-form-field>
+              <div class="row">
+                <div class="col">
+                  <mat-form-field appearance="fill">
+                    <mat-label>Nome</mat-label>
+                    <input formControlName="name"  matInput type="text">
+                    <mat-error *ngIf="form.get('name')?.errors">{{ form.get('name')?.errors | error }}</mat-error>
+                  </mat-form-field>
+                </div>
+                <div class="col">
+                  <mat-form-field appearance="fill">
+                    <mat-label>Sobrenome</mat-label>
+                    <input formControlName="lastName" matInput type="text">
+                    <mat-error *ngIf="form.get('lastName')?.errors">{{ form.get('lastName')?.errors | error }}</mat-error>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <mat-form-field appearance="fill">
+                    <mat-label>Data de nascimento</mat-label>
+                    <input [matDatepicker]="picker" formControlName="birthDate" matInput type="text">
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                    <mat-error *ngIf="form.get('birthDate')?.errors">{{ form.get('birthDate')?.errors | error }}</mat-error>
+                  </mat-form-field>
+                </div>
+              </div>
+              <mat-form-field appearance="fill">
+                <mat-label>Nível de acesso</mat-label>
+                <mat-select formControlName="type" placeholder="">
+                    <mat-option [value]="option.value" *ngFor="let option of options">{{ option.name }}</mat-option>
+                </mat-select>
+                <mat-error *ngIf="form.get('type')?.errors">{{ form.get('type')?.errors | error }}</mat-error>
+              </mat-form-field>
+              <mat-form-field appearance="fill">
+                <mat-label>Local</mat-label>
+                <mat-select formControlName="placeId" placeholder="selecione o local">
+                    <mat-option [value]="option.value" *ngFor="let option of placeOptions">{{ option.name }}</mat-option>
+                </mat-select>
+                <mat-error *ngIf="form.get('placeId')?.errors">{{ form.get('placeId')?.errors | error }}</mat-error>
+              </mat-form-field>
+              <ng-container formArrayName="contacts">
+                <ng-container [formGroupName]="i" *ngFor="let formGroup of Contacts.controls;let i = index">
+                  <div class="row">
+                    <div class="col">
+                      <mat-form-field appearance="fill">
+                        <mat-label>E-mail</mat-label>
+                        <input formControlName="email" matInput type="text">
+                        <mat-error *ngIf="form.get('email')?.errors">{{ form.get('email')?.errors | error }}</mat-error>
+                      </mat-form-field>
+                    </div>
+                    <div class="col">
+                      <mat-form-field appearance="fill">
+                        <mat-label>Telefone</mat-label>
+                        <input mask="(00) 00000-0000||(00) 0000-0000" formControlName="phone" matInput type="text">
+                        <mat-error *ngIf="form.get('phone')?.errors">{{ form.get('phone')?.errors | error }}</mat-error>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                </ng-container>
+              </ng-container>
+            </div>
+            <div class="d-flex justify-content-between align-items-center w-100">
+              <button (click)="navigateBack()" mat-button>
+                <div class="d-flex align-items-center py-2 mx-4">
+                  <mat-icon class="me-2">keyboard_arrow_left</mat-icon>
+                  <span class="d-block color-primary">Voltar</span>
+                </div>
+              </button>
+              <button (click)="onSubmit()" color="accent" mat-flat-button>
+                <div class="d-flex align-items-center py-2 mx-4">
+                  <span class="d-inline-block m-auto">Enviar</span>
+                  <mat-icon class="d-inline-block m-auto ms-2">send</mat-icon>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </mat-card>
+</div>

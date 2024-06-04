@@ -1,0 +1,110 @@
+<ng-container *ngIf="!loading">
+  <div class="user-image-container mt-3 mb-2">
+    <img class="user-image" [src]="residentImage" alt="resident-image">
+  </div>
+  <form [formGroup]="form" class="container non-interactive-form">
+    <div class="mx-2">
+      <div class="d-flex align-items-center justify-content-between mb-2">
+        <span class="d-block access-label color-primary">Dados do acesso</span>
+        <span class="d-block access-number">#{{ access.id }}</span>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field appearance="fill">
+            <mat-label class="enabled">Local</mat-label>
+            <input formControlName="local"  matInput type="text">
+            <mat-error *ngIf="form.get('local')?.errors">{{ form.get('local')?.errors | error }}</mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field appearance="fill">
+            <mat-label class="enabled">Tipo</mat-label>
+            <input formControlName="accessType"  matInput type="text">
+            <mat-error *ngIf="form.get('accessType')?.errors">{{ form.get('accessType')?.errors | error }}</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field appearance="fill">
+            <mat-label class="enabled">Data / Horário</mat-label>
+            <mat-icon matSuffix class="mat-18">date_range</mat-icon>
+            <input formControlName="date" matInput type="text">
+            <mat-error *ngIf="form.get('date')?.errors">{{ form.get('date')?.errors | error }}</mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="col">
+        <mat-form-field appearance="fill">
+          <mat-label class="enabled">Token</mat-label>
+          <input formControlName="date" matInput type="text">
+          <mat-icon matSuffix class="me-2">lock</mat-icon>
+          <mat-error *ngIf="form.get('date')?.errors">{{ form.get('date')?.errors | error }}</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="d-flex align-items-center justify-content-between mb-2">
+        <span class="d-block access-label color-primary">Dados do acessante</span>
+        <a mat-dialog-close [routerLink]="['/internal/users/'+ access.resident.id]">Ver mais</a>
+      </div>
+      <mat-form-field appearance="fill">
+        <mat-label class="enabled">Nome</mat-label>
+        <input formControlName="name"  matInput type="text">
+        <mat-error *ngIf="form.get('name')?.errors">{{ form.get('name')?.errors | error }}</mat-error>
+      </mat-form-field>
+      <div class="row">
+        <div class="col">
+          <mat-form-field appearance="fill">
+            <mat-label class="enabled">Data de nascimento</mat-label>
+            <input formControlName="birthDate" matInput type="text">
+            <mat-icon matSuffix class="mat-18">date_range</mat-icon>
+            <mat-error *ngIf="form.get('birthDate')?.errors">{{ form.get('birthDate')?.errors | error }}</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field appearance="fill">
+            <mat-label class="enabled">CPF</mat-label>
+            <input placeholder="000.000.000-00" mask="000.000.000-00" formControlName="documentNumber" matInput type="text">
+            <mat-error *ngIf="form.get('documentNumber')?.errors">{{ form.get('documentNumber')?.errors | error }}</mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="col">
+        <mat-form-field appearance="fill">
+          <mat-label class="enabled">Nível de acesso</mat-label>
+          <input formControlName="type" matInput type="text">
+          <mat-error *ngIf="form.get('type')?.errors">{{ form.get('type')?.errors | error }}</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="row mb-2">
+        <div class="col ms-1">
+          <label for="placeGroup">Possui imóvel vinculado ?</label>
+          <mat-radio-group id="placeGroup" formControlName="hasPlace">
+            <mat-radio-button [value]="true">Sim</mat-radio-button>
+            <mat-radio-button [value]="false">Não</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field appearance="fill">
+            <mat-label class="enabled">Imóvel</mat-label>
+            <input formControlName="placeDescription" matInput type="text">
+            <mat-error *ngIf="form.get('placeDescription')?.errors">{{ form.get('placeDescription')?.errors | error }}</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field appearance="fill">
+            <mat-label class="enabled">Tipo do imóvel</mat-label>
+            <input formControlName="placeType" matInput type="text">
+            <mat-error *ngIf="form.get('placeType')?.errors">{{ form.get('placeType')?.errors | error }}</mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+  </form>
+</ng-container>
+
+
+<div class="spinner-container" *ngIf="loading">
+  <app-spinner></app-spinner>
+</div>

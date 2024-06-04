@@ -2,42 +2,20 @@
   <div class="header">
     <h1 class="cor-texto font-titulo fadeIn">{{ titleState.title }}</h1>
     <div class="links">
-      <button disableRipple class="me-2" mat-icon-button>
-        <mat-icon class="notification-icon"> notifications </mat-icon>
-      </button>
       <div class="align-right">
-        <!-- <span class="text-user">{{this.user.Description | uppercase}}</span>
-        <p class="text-company">{{this.company.Description | uppercase}}</p> -->
-      </div>
-      <!-- <div class="item">
-        <button [matMenuTriggerFor]="menu" disableRipple mat-icon-button aria-label="dropdown-menu">
-          <mat-icon>arrow_drop_down</mat-icon>
+        <button (click)="navigateToFastAccess()" class="text-uppercase me-5" mat-flat-button color="accent">
+          <span>{{ 'Acesso rápido' | uppercase }}</span>
+          <mat-icon class="rotate-90 cor-texto-claro">keyboard_tab</mat-icon>
         </button>
-        <mat-menu yPosition="below" xPosition="before" #menu="matMenu">
-          <button mat-menu-item>
-            <div *ngIf="HasInvalidUnit" class="badge manage-units-badge fadeIn">!</div>
-            <mat-icon>apartment</mat-icon>
-            <span class="text-muted profile-item-desc ellipse-text" matTooltip="{{this.company.Description | uppercase}}">{{this.company.Description | uppercase}}</span>
-          </button>
-          <button mat-menu-item (click)="openVerifyCompany()">
-            <div *ngIf="HasInvalidUnit" class="badge manage-units-badge fadeIn">!</div>
-            <mat-icon>verified_user</mat-icon>
-            <span class="text-muted profile-item-desc">Gerenciar empresas</span>
-          </button>
-          <button mat-menu-item (click)="navigateToEditProfile()">
-            <mat-icon>edit</mat-icon>
-            <span class="text-muted profile-item-desc">Editar meu perfil</span>
-          </button>
-          <button mat-menu-item (click)="navigateToFirstAccessTutorial()">
-            <mat-icon>play_lesson</mat-icon>
-            <span class="text-muted profile-item-desc">Tutorial primeiro acesso</span>
-          </button>
-          <button mat-menu-item (click)="logoff()">
-            <mat-icon>logout</mat-icon>
-            <span class="text-muted profile-item-desc">Sair</span>
-          </button>
-        </mat-menu>
-      </div> -->
+        <span class="text-user">{{ user?.Description | uppercase }}</span>
+      </div>
+      <div class="mx-2">|</div>
+      <div>
+        <button (click)="logoff()" mat-button>
+          logout
+          <mat-icon>logout</mat-icon>
+        </button>
+      </div>
     </div>
   </div>
 

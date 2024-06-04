@@ -1,0 +1,36 @@
+@import '/src/assets/scss/variables';
+@import '/src/assets/scss/utils';
+
+span {
+  font-family: 'KanitRegular';
+  font-weight: 500;
+  font-size: $size-18;
+}
+
+
+
+mat-icon.access {
+  padding-top: .1em;
+  height: auto;
+  width: 1em;
+
+  &.access-lg {
+    font-size: 6em;
+  }
+
+  &.access-md {
+    font-size: 4em;
+  }
+
+  &.access-sm {
+    font-size: 1.25rem;
+  }
+
+  &.in {
+    color: $cor-verde;
+  }
+
+  &.out {
+    color: $warning-color;
+  }
+}
